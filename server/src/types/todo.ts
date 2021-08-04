@@ -18,7 +18,7 @@ export interface ProductArray {
 }
 
 export interface IUser extends Document {
-    username: string;
+    name: string;
     email: string;
     password: string;
     role: Number;
@@ -29,6 +29,16 @@ export interface IUser extends Document {
 
 export interface ICategory extends Document {
     name: string;
+}
+
+export interface IPayment extends Document {
+    user_id:  String;
+    name: String;
+    email: String;  
+    paymentID: String;    
+    address: Object;
+    cart: ProductArray;
+    status: Boolean;  
 }
 
 export interface IPayload extends Document {

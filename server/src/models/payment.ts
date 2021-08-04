@@ -1,4 +1,5 @@
-const mongoose = require('mongoose')
+import { IPayment } from "../types/todo";
+import mongoose from 'mongoose';
 
 const paymentSchema = new mongoose.Schema({
     user_id: {
@@ -33,5 +34,6 @@ const paymentSchema = new mongoose.Schema({
     timestamps: true
 })
 
+const Payments = mongoose.model<IPayment>('Payments', paymentSchema);
 
-module.exports = mongoose.model("Payments", paymentSchema)
+export default Payments;

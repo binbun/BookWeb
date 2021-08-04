@@ -1,6 +1,6 @@
-const Payments = require('../models/paymentModel')
-const Users = require('../models/userModel')
-const Products = require('../models/productModel')
+import Payments from '../../models/payment'
+import Users from '../../models/user'
+import Products from '../../models/product'
 import { Request, Response, NextFunction } from "express"
 import { IProduct } from "../../types/todo"
 import { IGetUserAuthInfoRequest } from "../users"

@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const paymentCtrl = require('../controllers/paymentCtrl')
+const paymentCtrl = require('../controllers/payments')
 import auth from '../middleware/auth'
 import authAdmin from '../middleware/authAdmin'
 
