@@ -1,4 +1,5 @@
 import Users from '../../models/user'
+import Payments from '../../models/payment'
 // const Payments = require('../models/paymentModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -122,15 +123,15 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-    // history: async(req: IGetUserAuthInfoRequest, res: Response) =>{
-    //     try {
-    //         const history = await Payments.find({user_id: req.user.id})
+    history: async(req: IGetUserAuthInfoRequest, res: Response) =>{
+        try {
+            const history = await Payments.find({user_id: req.user.id})
 
-    //         res.json(history)
-    //     } catch (err) {
-    //         return res.status(500).json({msg: err.message})
-    //     }
-    // }
+            res.json(history)
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    }
  }
 
 
